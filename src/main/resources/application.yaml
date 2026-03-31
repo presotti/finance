@@ -3,10 +3,13 @@ spring:
     name: finance
 
   datasource:
-    url: ${DB_URL}.
+    url: ${DB_URL}
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 5
+      connection-timeout: 30000
 
   jpa:
     hibernate:
@@ -16,3 +19,7 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
+
+  server:
+    # O Railway injeta a variável PORT. Isso é CRUCIAL.
+    port: ${PORT:8080}
