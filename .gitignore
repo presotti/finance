@@ -1,0 +1,29 @@
+### Configurações de Ambiente (Importante!) ###
+# Ignore arquivos que contenham senhas de banco de dados ou chaves de API
+application.yml
+application-dev.yml
+application-prod.yml
+
+# Se você usa um arquivo .yml genérico para segredos
+secrets.yml
+credentials.yml
+
+### JetBrains IDE (IntelliJ IDEA) ###
+.idea/
+*.iml
+
+### Gradle / Build ###
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+### Docker / Local Setup ###
+# Se você usa Docker para subir o banco localmente
+.docker/
+docker-compose.override.yml
+
+### Logs e Temporários ###
+*.log
+logs/
+tmp/
