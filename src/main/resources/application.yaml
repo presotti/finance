@@ -17,7 +17,6 @@ spring:
     show-sql: true # Mostra as queries no console (bom para debug)
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
 
 server:
