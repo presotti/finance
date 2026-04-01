@@ -20,6 +20,6 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
 
-  server:
-    # O Railway injeta a variável PORT. Isso é CRUCIAL.
-    port: ${PORT:8080}
+server:
+  # O Railway injeta a variável PORT. Isso é CRUCIAL.
+  port: ${PORT:8080}
