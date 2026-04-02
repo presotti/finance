@@ -66,7 +66,7 @@ class TransactionService(private val transactionRepository: TransactionRepositor
                 ).toInt()
 
                 // Se os meses passados superarem o número de parcelas, desativa
-                if (monthsPassed >= transaction.installments) {
+                if (monthsPassed > transaction.installments) {
                     transaction.active = false
                     transactionsToUpdate.add(transaction)
                 }
